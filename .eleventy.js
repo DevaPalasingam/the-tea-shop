@@ -13,7 +13,7 @@ const twigOptions = {
 }
 
 module.exports = (config) => {
-  config.addPassthroughCopy('assets')
+  config.addPassthroughCopy({ public: './' })
   config.addPlugin(twig, twigOptions)
   config.setBrowserSyncConfig({
     files: ['dist/**/*'],
