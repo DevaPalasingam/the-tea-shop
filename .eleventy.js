@@ -1,4 +1,4 @@
-const twig = require("@factorial/eleventy-plugin-twig");
+const twig = require('@factorial/eleventy-plugin-twig')
 
 const twigOptions = {
   twig: {
@@ -6,14 +6,14 @@ const twigOptions = {
   },
   images: {},
   dir: {
-    input: "src",
-    output: "dist",
-    watch: "src/**/*.{css,js,twig}",
+    input: 'src',
+    output: 'dist',
+    watch: 'src/**/*.{css,js,twig}',
   },
-};
+}
 
 module.exports = (config) => {
-  config.addPassthroughCopy({ 'public': './' })
+  config.addPassthroughCopy('assets')
   config.addPlugin(twig, twigOptions)
   config.setBrowserSyncConfig({
     files: ['dist/**/*'],
